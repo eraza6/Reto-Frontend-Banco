@@ -1,0 +1,54 @@
+<app-loading *ngIf="loading==true"></app-loading>
+<div>
+  <!-- Navbar Agencies -->
+  <nav class="navbar fixed-top navbar-light bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="#">Agencias</a>
+      <div class="d-flex">
+        <div class="row">
+          <div class="col-6">
+            <img src="assets/icons/ic-search.svg" alt="search">
+          </div>
+          <div class="col-6">
+            <img src="assets/icons/ic-check.svg" alt="check">
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<div class="container">
+  <!-- Card Agencies -->
+  <div class="content-center">
+    <a class="text-center mt-3" (click)="showMap()">Ver mapa de Agencias</a>
+  </div>
+  <div>
+    <ul class="list-group" *ngFor="let agency of agencies;let i = index;" (click)="updateAgency(i)">
+      <li>
+        <div class="media">
+          <img
+            src="https://lorempixel.com/330/{{numRandom+i}}/"
+            class="mr-4 round-photo" alt="photo">
+          <div class="media-body">
+            <h5>{{agency?.agencia}}</h5>
+            <p>{{agency?.departamento}}</p>
+            <p>{{agency?.direccion}}</p>
+          </div>
+          <img src="assets/icons/ic-star.svg" alt="star">
+        </div>
+      </li>
+    </ul>
+  </div>
+  <!-- Floating Button -->
+  <div>
+    <button (click)="addAgency()" class="btn btn-color btn-round">
+      <img src="assets/icons/ic-plus.svg">
+    </button>
+  </div>
+</div>
+
+<div class="alert alert-warning alert-dismissible fade show" role="alert"  *ngIf="alertDanger==true">
+  <strong>Error!</strong> Se presento un inconveniente al mostrar las agencias.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>

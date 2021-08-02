@@ -1,0 +1,42 @@
+
+.container {
+  margin-top: 70px;
+}
+
+.btn-color {
+  color: #212529;
+  background-color: #ff9d00;
+  box-shadow: 1px 1px grey;
+}
+
+.btn-round {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+}
+
+.round-photo {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+}
+
+ul {
+  list-style-type: none;
+  margin-bottom: 1rem;
+  li {
+    cursor: pointer;
+    border: 0;
+    border-bottom: 1px solid;
+  }
+}
+
+.content-center{
+  text-align: center;
+  margin-bottom: 10px;
+  text-decoration: underline;
+}
+

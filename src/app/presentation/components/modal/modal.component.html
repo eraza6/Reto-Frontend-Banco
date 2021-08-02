@@ -1,0 +1,25 @@
+<div class="modal modal-general" [ngStyle]="{'display':display}">
+  <div class="background"></div>
+
+  <div class="modal-content">
+    <span class="close" (click)="closeModal()" #close>
+        <svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g id="CREAR-RR.AA" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g id="04-BO-Creación-RR.AA" transform="translate(-1304.000000, -66.000000)" fill="#86888C" stroke="#86888C">
+            <g id="Group-6" transform="translate(1305.000000, 67.000000)">
+              <path
+                d="M13.6967576,12.00015 L23.6481088,2.04867439 C24.1172971,1.57948026 24.1172971,0.821089736 23.6481088,0.351895601 C23.1789205,-0.117298534 22.4205395,-0.117298534 21.9513512,0.351895601 L12,10.3033712 L2.04864878,0.351895601 C1.57946051,-0.117298534 0.821079473,-0.117298534 0.351891203,0.351895601 C-0.117297068,0.821089736 -0.117297068,1.57948026 0.351891203,2.04867439 L10.3032424,12.00015 L0.351891203,21.9516256 C-0.117297068,22.4208197 -0.117297068,23.1792103 0.351891203,23.6484044 C0.585885353,23.8824015 0.893077673,24 1.20026999,24 C1.50746231,24 1.81465463,23.8824015 2.04864878,23.6484044 L12,13.6969288 L21.9513512,23.6484044 C22.1853454,23.8824015 22.4925377,24 22.79973,24 C23.1069223,24 23.4141146,23.8824015 23.6481088,23.6484044 C24.1172971,23.1792103 24.1172971,22.4208197 23.6481088,21.9516256 L13.6967576,12.00015 Z"
+                id="Fill-4"></path>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </span>
+    <div class="modal-body" [innerHTML]="content">
+    </div>
+    <div class="modal-buttons">
+      <button class="boton" type="button" (click)="triggerAction()">{{text}}</button>
+    </div>
+  </div>
+
+</div>

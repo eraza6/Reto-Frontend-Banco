@@ -1,0 +1,51 @@
+<app-loading *ngIf="loading==true"></app-loading>
+<div>
+  <!-- Navbar Agencies -->
+  <nav class="navbar fixed-top navbar-light bg-primary">
+    <div class="container-fluid justify-center">
+      <a class="navbar-brand text-white" href="#">{{ (action==true)? 'Agregar Agencia' : 'Detalle de Agencia' }}</a>
+    </div>
+  </nav>
+</div>
+<div class="w-100 container">
+  <div class="alert alert-warning alert-dismissible fade show" role="alert"  *ngIf="alertDanger==true">
+    <strong>Error!</strong> Se presento un inconveniente al mostrar las agencias.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  <div class="mt-4 mb-4">
+    <div class="form-group">
+        <label for="textInput" class="text-primary">Nombre de la Agencia</label>
+        <input type="text" [value]="agency?.agencia" [(ngModel)]="agency.agencia"  required  class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="textInput" class="text-primary">Nombre de la Dirección</label>
+        <input type="text" [value]="agency?.direccion" [(ngModel)]="agency.direccion"  class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="textInput" class="text-primary">Nombre del Departamento</label>
+        <input type="text" [value]="agency?.departamento" [(ngModel)]="agency.departamento"  class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="textInput" class="text-primary">Nombre de la Provincia</label>
+        <input type="text" [value]="agency?.provincia" [(ngModel)]="agency.provincia"  class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="textInput" class="text-primary">Nombre del Distrito</label>
+        <input type="text" [value]="agency?.distrito" [(ngModel)]="agency.distrito"  class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="textInput" class="text-primary">Latitud</label>
+        <input type="text" [value]="agency?.lat" [(ngModel)]="agency.lat"  class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="textInput" class="text-primary">Longitud</label>
+        <input type="text" [value]="agency?.lon" [(ngModel)]="agency.lon"  class="form-control">
+    </div>
+</div>
+<div class="d-flex flex-column flex-md-row align-items-center justify-content-center mt-4">
+  <button class="btn btn-primary mr-8" action="submit" (click)="actionButton()" >{{ (action==true)? 'Agregar' : 'Actualizar' }}</button>
+  <button class="btn btn-outline-primary mt-2 mt-md-0" action="button" (click)="cancel()">Cancelar</button>
+</div>
+<app-modal [display]="displaySuccess" [content]="htmlmodalGeneral" (action)="goHome()"
+  [text]="'Ir al inicio'" (close)="goHome()"></app-modal>
+</div>
