@@ -1,6 +1,6 @@
 # ChallengueFronted
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.3.
+Reto resuelto donde nos dieron un caso de uso donde simula la consulta de Agencias y crud usando buenas practicas y patrones de diseño para el puesto Frontend Developer con Angular
 
 Para correr el proyecto
 
